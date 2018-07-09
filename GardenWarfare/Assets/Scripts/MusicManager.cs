@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,6 +26,11 @@ public class MusicManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 	}
+
+    public void ChangeVolume(float volume)
+    {
+        audioSource.volume = volume;
+    }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
